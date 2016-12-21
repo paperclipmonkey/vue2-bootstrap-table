@@ -13,7 +13,7 @@ Features:
       <tr>
         <th v-for="key in columns"
           @click="sortBy(key.path)"
-          :class="{ act: sortKey == key.path }">
+          :class="[key.addClass, { act: sortKey == key.path}]">
           {{ key.title }}
           <span class="arrow" :class="sortOrders[key.path] > 0 ? 'asc' : 'dsc'">
           </span>
@@ -22,7 +22,7 @@ Features:
     </thead>
     <tbody>
       <tr v-for="entry in limitedData" @click="rowEvent(entry)" :class="{ clickable: !!clickEv }">
-        <td v-for="key in columns">
+        <td v-for="key in columns" :class="[key.addClass]">
           <template v-if="key.render">
             {{ key.render(entry[key.path]) }}
           </template>

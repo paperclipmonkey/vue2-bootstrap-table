@@ -33,6 +33,7 @@
         // 'title' - Displayed title in table header
         // 'path' - js path to look for the object value in the data
         // 'render' - optional rendering function used for each cell in a column
+        // 'addClass' - classes string added to the th and td elements of the column
         headers: [
           {
             title: 'published',
@@ -45,7 +46,8 @@
             path: 'title'
           }, {
             title: 'description',
-            path: 'description'
+            path: 'description',
+            addClass: 'hidden-xs'
           }
         ],
         searchQuery: '', // Search query passed in to the table filtering. Checked in lowercase against the cells
