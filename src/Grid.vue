@@ -14,7 +14,7 @@ Features:
         <th v-for="key in columns"
           @click="sortBy(key.path)"
           :class="{ act: sortKey == key.path }">
-          {{ key.title | capitalize }}
+          {{ key.title }}
           <span class="arrow" :class="sortOrders[key.path] > 0 ? 'asc' : 'dsc'">
           </span>
         </th>
@@ -117,11 +117,6 @@ Features:
           this.currentPage * this.rowsPerPage,
           this.rowsPerPage * (this.currentPage + 1)
         )
-      }
-    },
-    filters: {
-      capitalize: function (str) { // Capitalise the first letter text
-        return str.charAt(0).toUpperCase() + str.slice(1)
       }
     },
     methods: {
