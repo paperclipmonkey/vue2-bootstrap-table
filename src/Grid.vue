@@ -157,7 +157,6 @@ Features:
   }
 
   th, td {
-    min-width: 120px;
     padding: 10px 20px;
   }
 
