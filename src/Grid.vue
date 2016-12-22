@@ -38,7 +38,7 @@ Features:
       </tr>
     </tbody>
   </table>
-    <div class="row">
+    <div class="row" v-if="noPages.length > 1">
       <div class="text-center">
         <ul class="pagination">
           <li :class="{disabled: (currentPage === 0)}"><a href="#" @click="previous">Previous</a></li>
