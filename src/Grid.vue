@@ -154,7 +154,7 @@ Features:
 </script>
 
 <style scoped>
-  .clickable {
+  .grid-row {
     cursor: pointer;
   }
 
