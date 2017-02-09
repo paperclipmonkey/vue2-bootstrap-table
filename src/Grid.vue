@@ -21,8 +21,8 @@ Features:
       </tr>
     </thead>
     <tbody>
-      <tr v-for="entry in limitedData" @click="rowEvent(entry)" :class="{ clickable: !!clickEv }">
-        <td v-for="key in columns" :class="[key.addClass]">
+      <tr v-for="entry in limitedData" @click="rowEvent(entry)" class="grid-row">
+        <td v-for="key in columns" :class="[key.addClass]"  class="grid-cell">
           <template v-if="key.render">
             {{ key.render(entry[key.path]) }}
           </template>
