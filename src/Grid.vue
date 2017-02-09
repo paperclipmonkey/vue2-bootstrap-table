@@ -31,7 +31,12 @@ Features:
           </template>
         </td>
       </tr>
-      <tr v-if="!data || !data.length">
+      <tr v-if="isLoading">
+        <td :colspan="columns.length" class="text-center noData">
+          <span class="glyphicon glyphicon-repeat normal-right-spinner"></span>
+        </td>
+      </tr>
+      <tr v-if="!isLoading && !data.length">
         <td :colspan="columns.length" class="text-center noData">
           {{emptyTableText}}
         </td>
@@ -61,7 +66,8 @@ Features:
       columns: Array, // List of columns ['title', 'description']
       filterKey: String, // String to filter on ''
       customEmptyTableText: '', // optional text override for empty table
-      rowsPerPage: Number // Number of rows per page of results
+      rowsPerPage: Number, // Number of rows per page of results
+      isLoading: false
     },
     data: function () {
       var sortOrders = {}
@@ -187,5 +193,35 @@ Features:
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
     border-top: 4px solid #fff;
+  }
+
+  .glyphicon.normal-right-spinner {
+    -webkit-animation: glyphicon-spin-r 2s infinite linear;
+    animation: glyphicon-spin-r 2s infinite linear;
+    font-size: 2em;
+  }
+
+  @-webkit-keyframes glyphicon-spin-r {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(359deg);
+      transform: rotate(359deg);
+    }
+  }
+
+  @keyframes glyphicon-spin-r {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(359deg);
+      transform: rotate(359deg);
+    }
   }
 </style>
