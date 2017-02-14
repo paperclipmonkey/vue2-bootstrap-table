@@ -83,6 +83,9 @@ Features:
     watch: {
       'filterKey': function (a, b) { // Reset to page 0 when search changes
         this.currentPage = 0
+      },
+      'rowsPerPage': function (a, b) { // Reset to page 0 when items per page changes
+        this.currentPage = 0
       }
     },
     computed: {
