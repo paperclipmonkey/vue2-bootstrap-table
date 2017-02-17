@@ -33,7 +33,7 @@ Features:
       </tr>
       <tr v-if="isLoading">
         <td :colspan="columns.length" class="text-center noData">
-          <span class="glyphicon glyphicon-repeat normal-right-spinner"></span>
+          <i class="fa fa-spinner fa-spin"></i>
         </td>
       </tr>
       <tr v-if="!isLoading && !data.length">
@@ -196,35 +196,5 @@ Features:
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
     border-top: 4px solid #fff;
-  }
-
-  .glyphicon.normal-right-spinner {
-    -webkit-animation: glyphicon-spin-r 2s infinite linear;
-    animation: glyphicon-spin-r 2s infinite linear;
-    font-size: 2em;
-  }
-
-  @-webkit-keyframes glyphicon-spin-r {
-    0% {
-      -webkit-transform: rotate(0deg);
-      transform: rotate(0deg);
-    }
-
-    100% {
-      -webkit-transform: rotate(359deg);
-      transform: rotate(359deg);
-    }
-  }
-
-  @keyframes glyphicon-spin-r {
-    0% {
-      -webkit-transform: rotate(0deg);
-      transform: rotate(0deg);
-    }
-
-    100% {
-      -webkit-transform: rotate(359deg);
-      transform: rotate(359deg);
-    }
   }
 </style>
