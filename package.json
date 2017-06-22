@@ -11,6 +11,9 @@
     "type": "git",
     "url": "git+https://paperclipmonkey@github.com/paperclipmonkey/vue2-bootstrap-table.git"
   },
+  "dependancies": {
+    "babel-plugin-add-module-exports": "^0.2.1"
+  },
   "devDependencies": {
     "bootstrap": "^3.3.7",
     "bootstrap-sass": "^3.3.7",
@@ -22,7 +25,6 @@
     "babel-eslint": "^7.0.0",
     "babel-helper-vue-jsx-merge-props": "^2.0.2",
     "babel-loader": "^6.0.0",
-    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-runtime": "^6.0.0",
     "babel-plugin-transform-vue-jsx": "^3.2.0",
