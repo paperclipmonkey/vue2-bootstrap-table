@@ -1,6 +1,6 @@
 {
   "name": "vue2-bootstrap-table",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "A Vue.js 2 table using bootstrap 3 styles",
   "main": "src/Grid.vue",
   "scripts": {
@@ -101,5 +101,9 @@
   "engines": {
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
+  },
+  "dependencies": {
+    "hopscotch": "^0.3.1",
+    "lodash": "^4.17.4"
   }
 }

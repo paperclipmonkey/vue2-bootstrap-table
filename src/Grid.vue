@@ -24,10 +24,10 @@ Features:
       <tr v-for="entry in limitedData" @click="rowEvent(entry)" class="grid-row">
         <td v-for="key in columns" :class="[key.addClass]"  class="grid-cell">
           <template v-if="key.render">
-            {{ key.render(entry[key.path]) }}
+            {{ key.render(getPath(entry, key.path)) }}
           </template>
           <template v-else>
-            {{entry[key.path] }}
+            {{ getPath(entry, key.path) }}
           </template>
         </td>
       </tr>
@@ -60,6 +60,8 @@ Features:
 </template>
 
 <script>
+  import _ from 'lodash'
+
   export default {
     props: {
       data: Array, // Unfiltered table data
@@ -129,6 +131,9 @@ Features:
       }
     },
     methods: {
+      getPath: function (obj, path, def) {
+        return _.get(obj, path, def)
+      },
       sortBy: function (key) { // header row click handler. Sort by column
         this.sortKey = key
         this.sortOrders[key] = this.sortOrders[key] * -1
