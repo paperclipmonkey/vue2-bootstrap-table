@@ -23,12 +23,15 @@ Features:
     <tbody>
       <tr v-for="entry in limitedData" @click="rowEvent(entry)" class="grid-row">
         <td v-for="key in columns" :class="[key.addClass]"  class="grid-cell">
-          <template v-if="key.render">
-            {{ key.render(getPath(entry, key.path)) }}
-          </template>
-          <template v-else>
-            {{ getPath(entry, key.path) }}
-          </template>
+          <slot :name="key.path"
+            :entry="entry" :column="key">
+            <template v-if="key.render">
+              {{ key.render(getPath(entry, key.path)) }}
+            </template>
+            <template v-else>
+              {{ getPath(entry, key.path) }}
+            </template>
+          </slot>
         </td>
       </tr>
       <tr v-if="isLoading">
