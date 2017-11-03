@@ -1,6 +1,6 @@
 {
   "name": "vue2-bootstrap-table",
-  "version": "0.1.11",
+  "version": "0.2.0",
   "description": "A Vue.js 2 table using bootstrap 3 styles",
   "main": "src/Grid.vue",
   "scripts": {
