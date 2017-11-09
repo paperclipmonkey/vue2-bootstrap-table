@@ -118,7 +118,7 @@ Features:
           })
         }
         if (sortKey) { // If sort specified, sort
-          data = data.slice().sort(function (a, b) {
+          data = data.slice().sort((a, b) => {
             a = this.getPath(a, sortKey)
             b = this.getPath(b, sortKey)
             if (typeof a === 'string' && typeof b === 'string') return a.toLowerCase().localeCompare(b.toLowerCase()) * order
