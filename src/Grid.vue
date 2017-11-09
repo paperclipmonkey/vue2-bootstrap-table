@@ -119,8 +119,9 @@ Features:
         }
         if (sortKey) { // If sort specified, sort
           data = data.slice().sort(function (a, b) {
-            a = a[sortKey]
-            b = b[sortKey]
+            a = this.getPath(a, sortKey)
+            b = this.getPath(b, sortKey)
+            if (typeof a === 'string' && typeof b === 'string') return a.toLowerCase().localeCompare(b.toLowerCase()) * order
             return (a === b ? 0 : a > b ? 1 : -1) * order
           })
         }
