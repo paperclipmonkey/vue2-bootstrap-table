@@ -1,4 +1,4 @@
-#Vue2-Bootstrap-Table
+# Vue2-Bootstrap-Table
 
 A simple VueJS 2.0 table component using Bootstrap styles
 
@@ -6,20 +6,20 @@ CSS relies on a parent supplying styles
 
 All JS is written in Vue, with no external dependancies
 
-##Features:
+## Features:
 * Filtering on all keys
 * Pagination
 * Sorting and reverse sorting on any key
 * Optional custom renderers for individual columns
 * Path keys for columns. Specify path using lodash _.get function. Eg: 'obj.obj.obj[0].prop'
 
-##Demo
+## Demo
 to try out the demo install the node modules dev dependencies with
 ```npm install```
 and build the code with
 ```npm run build```
 
-##Usage
+## Usage
 from a Vue webpack project
 
 ```js
